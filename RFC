@@ -1,0 +1,45 @@
+Epitech 2022                                                          M. GANGNI
+Category: Communication protocol                                       F. LALEYE
+                                                                        D. YOBO
+
+                                My_teams Protocol
+
+Introduction
+    This document provide all information for our project about all command that
+    we do in this project.
+
+Syntax
+    Each command is composed by a tag a space and a value and terminated by
+    \r\n.
+    [Command] [Space] [Value]
+    Example: LOG ['user_name']\r\n
+
+Command and return
+    When you send a command to the server he send back a command you have to
+    read. This command is composed by a code a space and a description ended
+    by \r\n.
+    [Code] [Space] [Description]
+    101 ['uuid user_name']\r\n
+
+List of command
+    HELP    []                              List all available command
+    LOGIN     ['user_name']                   Connection to the server
+    LOGOUT     []                              Disconnection from the current
+                                            server
+    USERS   []                              List all user on the server
+    USER    ['user_uuid']                   Get information from specified user
+
+List of return
+    201     Connection successful
+
+    202     Disconnection successful
+    203     display the help
+    204     List of users
+    205     Information about user
+
+    401     Command not found
+    402     User already exists
+    403     Uuid not found
+    404     Connection Failed
+    405     Invalid address / Address not supported
+    406     User are not connected
